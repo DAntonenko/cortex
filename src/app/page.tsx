@@ -34,6 +34,7 @@ export default function Home() {
             alt="Bear"
             width={329}
             height={448}
+            priority
           />
         </div>
       </div>
