@@ -1,66 +1,42 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import { Chat } from "@/components/ui/Chat/Chat";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+    <main className={styles.main}>
+      <section className={styles.main_menu}>
+        {/* <nav className={styles.activities}>
+          <a href="#" className={styles.activity}>
           </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        </nav> */}
+      </section>
+      <section className={styles.themes_section}>
+        <h1 className={styles.main_title}>
+          Hi&nbsp;John, what do&nbsp;you want to&nbsp;know?
+        </h1>
+        <div className={styles.themes_section_list}>
+          <p className={styles.theme}>What’s the largest ocean on Earth?</p>
+          <p className={styles.theme}>Tell me a joke!</p>
+          <p className={styles.theme}>What’s the largest ocean on Earth?</p>
+          <p className={styles.theme}>What are you doing today?</p>
+          <p className={styles.theme}>What are you doing today?</p>
+          <p className={styles.theme}>What’s the largest ocean on Earth?</p>
         </div>
-      </main>
-    </div>
+        <Chat className={styles.chat} />
+      </section>
+      <section className={styles.achievements}></section>
+      <div className={styles.image_container}>
+        <div className={styles.image_container_inner}>
+          <Image
+            className={styles.image}
+            src="/images/bear.png"
+            alt="Bear"
+            width={329}
+            height={448}
+          />
+        </div>
+      </div>
+    </main>
   );
 }

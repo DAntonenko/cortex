@@ -1,0 +1,18 @@
+.body {
+  height: 100vh;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-sans, system-ui), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--background);
+  background-image: url(../../public/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
